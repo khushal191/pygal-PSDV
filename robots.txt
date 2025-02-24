@@ -1,1 +1,1 @@
-Sitemap: https://nipunbatra.github.io/quarto-template/sitemap.xml
+Sitemap: https://khushal191.github.io/pygal-PSDV/sitemap.xml
