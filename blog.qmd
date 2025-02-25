@@ -1,5 +1,5 @@
 ---
-title: "Quarto Blog"
+title: "Pygal`:` Elegant and Interactive Data Visualization in Python"
 listing:
   contents: posts
   sort: "date desc"
