@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>visualisation – Quarto Template</title>
+<title>visualisation – Pygal: Elegant and Interactive Data Visualization in Python</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -112,7 +112,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
     <a class="navbar-brand" href="../index.html">
-    <span class="navbar-title">Quarto Template</span>
+    <span class="navbar-title">Pygal: Elegant and Interactive Data Visualization in Python</span>
     </a>
   </div>
             <div id="quarto-search" class="" title="Search"></div>
@@ -152,25 +152,66 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>Pygal is an open source user friendly Python Library that enables highly customizable SVG(Scalable Vector Graphics) charts. With it, you can generate charts that are perfect for web applications, reports and presentations. It integrates well with frameworks like FLash and Django and its output visualization is quick and elegant.</p>
 <p>Installation and Setup</p>
 <p>Use package manager pip</p>
-<p>pip install pygalimport into the scriptimport pygalif in jupyter notebooks:pip install ipythonpip install cairosvgThen, configure your notebook:from IPython.display import SVG, displaydef show_svg(svg): display(SVG(svg.render()))</p>
-<p>Key Features &amp; Explanation:</p>
-<p>Wide Range of Chart Types: Supports bar: Pygal’s Bar chart allows you to plot data for different categories and add multiple series.line: Line charts are used to display information as a series of data points connected by straight lines.pie: They’re useful for displaying how different parts make up a total.radar: Radar charts display multivariate data on axes starting from the same point. They are good for comparing multiple variables.box plots: Box plots are used to display the distribution of data based on five summary statistics: minimum, first quartile, median, third quartile, and maximum.and more.Interactive SVG Output: Charts are rendered as SVGs, making them scalable and interactive.Customizable Styles: Modify colors, labels, and tooltips to suit your needs.Browser-Friendly: SVG charts can be easily embedded in web pages.Export Options: Export charts as PNG, PDF, or other formats using additional libraries.</p>
-<p>Creating Dynamic Charts with Pygal</p>
-<p>One of Pygal’s key strengths is its ability to create dynamic charts by integrating with Python’s data structures. This enables charts to update automatically in response to real-time or changing datasets, making Pygal a great option for dashboards, reports, and web applications that need continuously updated data.example:import pygaldata = {‘Cats’: [1, 2, 3], ‘Dogs’: [4, 5, 6]}bar_chart = pygal.Bar()for key, values in data.items(): bar_chart.add(key, values)bar_chart.render_to_file(‘bar_chart.svg’)</p>
-<p>Exporting and Embedding Charts in Pygal</p>
-One of Pygal’s strengths is that it can export charts as SVG files, which stay clear and sharp at any size.Example:import pygalbar_chart = pygal.Bar()bar_chart.add(‘Cats’, [1, 2, 3])svg_data = bar_chart.render()with open(‘chart.html’, ‘w’) as file: file.write(f’
-
-
-{svg_data}
-
-
-<p>’)</p>
-<p>Use cases</p>
-<p>Web Dashboards: Embedding interactive charts for user analytics.Data Reports: Creating professional-looking charts for business insights.Educational Content: Visualizing mathematical functions and data sets for teaching.Scientific Research: Plotting experimental results interactively</p>
-<p>Conclusion:Pygal is an excellent choice for Python developers seeking quick, interactive, and visually appealing data visualizations. Its SVG output ensures charts look sharp at any size, making them perfect for both web and print. The simplicity of its API combined with a variety of chart types allows you to present data in the most effective and engaging way.</p>
-<div id="9f8ecdd4-71cc-4f0c-a26c-f859b8efcdf0" class="cell" data-trusted="true">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="9e11f904" class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="op">!</span> pip install pygal</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
+<div id="b4db63d9" class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> into the script</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pygal</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>if in jupyter notebooks:</p>
+<div id="67766ddc" class="cell">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="op">!</span> pip install ipython</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div id="e31f0fed" class="cell">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="op">!</span> pip install cairosvg</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Then, configure your notebook:</p>
+<div id="ede2a8d8-01fc-474d-8233-808e7b505bd2" class="cell">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> IPython.display <span class="im">import</span> SVG, display</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> show_svg(svg):</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>    display(SVG(svg.render()))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Key Features &amp; Explanation:</p>
+<p>Wide Range of Chart Types: Supports bar: Pygal’s Bar chart allows you to plot data for different categories and add multiple series.</p>
+<p>line: Line charts are used to display information as a series of data points connected by straight lines.</p>
+<p>pie: They’re useful for displaying how different parts make up a total.</p>
+<p>radar: Radar charts display multivariate data on axes starting from the same point. They are good for comparing multiple variables.</p>
+<p>box plots: Box plots are used to display the distribution of data based on five summary statistics: minimum, first quartile, median, third quartile, and maximum. and more.</p>
+<p>Interactive SVG Output: Charts are rendered as SVGs, making them scalable and interactive.</p>
+<p>Customizable Styles: Modify colors, labels, and tooltips to suit your needs.</p>
+<p>Browser-Friendly: SVG charts can be easily embedded in web pages.</p>
+<p>Export Options: Export charts as PNG, PDF, or other formats using additional libraries.</p>
+<p>Creating Dynamic Charts with Pygal</p>
+<p>One of Pygal’s key strengths is its ability to create dynamic charts by integrating with Python’s data structures. This enables charts to update automatically in response to real-time or changing datasets, making Pygal a great option for dashboards, reports, and web applications that need continuously updated data. example:</p>
+<div id="3730d377" class="cell">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pygal</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>data <span class="op">=</span> {<span class="st">'Cats'</span>: [<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>], <span class="st">'Dogs'</span>: [<span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">6</span>]}</span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>bar_chart <span class="op">=</span> pygal.Bar()</span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> key, values <span class="kw">in</span> data.items():</span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>    bar_chart.add(key, values)</span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>bar_chart.render_to_file(<span class="st">'bar_chart.svg'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Exporting and Embedding Charts in Pygal</p>
+<p>One of Pygal’s strengths is that it can export charts as SVG files, which stay clear and sharp at any size. Example:</p>
+<div id="b633d07f" class="cell">
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pygal</span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>bar_chart <span class="op">=</span> pygal.Bar()</span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>bar_chart.add(<span class="st">'Cats'</span>, [<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>])</span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>svg_data <span class="op">=</span> bar_chart.render()</span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a><span class="cf">with</span> <span class="bu">open</span>(<span class="st">'chart.html'</span>, <span class="st">'w'</span>) <span class="im">as</span> <span class="bu">file</span>:</span>
+<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a>    <span class="bu">file</span>.write(<span class="ss">f'&lt;html&gt;&lt;body&gt;</span><span class="sc">{</span>svg_data<span class="sc">}</span><span class="ss">&lt;/body&gt;&lt;/html&gt;'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Use cases</p>
+<p>Web Dashboards: Embedding interactive charts for user analytics.</p>
+<p>Data Reports: Creating professional-looking charts for business insights.</p>
+<p>Educational Content: Visualizing mathematical functions and data sets for teaching.</p>
+<p>Scientific Research: Plotting experimental results interactively</p>
+<p>Conclusion:</p>
+<p>Pygal is an excellent choice for Python developers seeking quick, interactive, and visually appealing data visualizations. Its SVG output ensures charts look sharp at any size, making them perfect for both web and print. The simplicity of its API combined with a variety of chart types allows you to present data in the most effective and engaging way.</p>
 
 
 
