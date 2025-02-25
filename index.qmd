@@ -2,6 +2,5 @@
 title: Pygal `:` A visualisation Library
 ---
 
- Pygal Text!
 
 
