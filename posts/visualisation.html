@@ -268,8 +268,210 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="conclusion" class="level3">
 <h3 class="anchored" data-anchor-id="conclusion">Conclusion:</h3>
 <p>Pygal is an excellent choice for Python developers seeking quick, interactive, and visually appealing data visualizations. Its SVG output ensures charts look sharp at any size, making them perfect for both web and print. The simplicity of its API combined with a variety of chart types allows you to present data in the most effective and engaging way.</p>
+<section id="using-matplotlib" class="level5">
+<h5 class="anchored" data-anchor-id="using-matplotlib">Using matplotlib:</h5>
+<div id="dd778648" class="cell">
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>months <span class="op">=</span> [<span class="st">'Jan'</span>, <span class="st">'Feb'</span>, <span class="st">'Mar'</span>, <span class="st">'Apr'</span>, <span class="st">'May'</span>, <span class="st">'Jun'</span>, <span class="st">'Jul'</span>, <span class="st">'Aug'</span>, <span class="st">'Sep'</span>, <span class="st">'Oct'</span>, <span class="st">'Nov'</span>, <span class="st">'Dec'</span>]</span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>product_a <span class="op">=</span> [<span class="dv">150</span>, <span class="dv">200</span>, <span class="dv">220</span>, <span class="dv">240</span>, <span class="dv">300</span>, <span class="dv">500</span>, <span class="dv">450</span>, <span class="dv">470</span>, <span class="dv">490</span>, <span class="dv">520</span>, <span class="dv">580</span>, <span class="dv">600</span>]</span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>product_b <span class="op">=</span> [<span class="dv">100</span>, <span class="dv">120</span>, <span class="dv">140</span>, <span class="dv">160</span>, <span class="dv">200</span>, <span class="dv">300</span>, <span class="dv">350</span>, <span class="dv">370</span>, <span class="dv">400</span>, <span class="dv">430</span>, <span class="dv">450</span>, <span class="dv">480</span>]</span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a>plt.figure(figsize<span class="op">=</span>(<span class="dv">10</span>, <span class="dv">6</span>))</span>
+<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a>plt.plot(months, product_a, label<span class="op">=</span><span class="st">'Product A'</span>, marker<span class="op">=</span><span class="st">'o'</span>, linestyle<span class="op">=</span><span class="st">'-'</span>, color<span class="op">=</span><span class="st">'blue'</span>)</span>
+<span id="cb8-9"><a href="#cb8-9" aria-hidden="true" tabindex="-1"></a>plt.plot(months, product_b, label<span class="op">=</span><span class="st">'Product B'</span>, marker<span class="op">=</span><span class="st">'s'</span>, linestyle<span class="op">=</span><span class="st">'--'</span>, color<span class="op">=</span><span class="st">'orange'</span>)</span>
+<span id="cb8-10"><a href="#cb8-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-11"><a href="#cb8-11" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">'Monthly Sales Data for Product A and Product B'</span>, fontsize<span class="op">=</span><span class="dv">16</span>)</span>
+<span id="cb8-12"><a href="#cb8-12" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">'Month'</span>, fontsize<span class="op">=</span><span class="dv">12</span>)</span>
+<span id="cb8-13"><a href="#cb8-13" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">'Sales'</span>, fontsize<span class="op">=</span><span class="dv">12</span>)</span>
+<span id="cb8-14"><a href="#cb8-14" aria-hidden="true" tabindex="-1"></a>plt.legend()</span>
+<span id="cb8-15"><a href="#cb8-15" aria-hidden="true" tabindex="-1"></a>plt.grid(<span class="va">True</span>, linestyle<span class="op">=</span><span class="st">'--'</span>, alpha<span class="op">=</span><span class="fl">0.5</span>)</span>
+<span id="cb8-16"><a href="#cb8-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-17"><a href="#cb8-17" aria-hidden="true" tabindex="-1"></a>plt.tight_layout()</span>
+<span id="cb8-18"><a href="#cb8-18" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-error">
+<div class="ansi-escaped-output">
+<pre><span class="ansi-red-fg ansi-bold">Running cells with 'Python 3.13.1' requires the ipykernel package.
+
+</span><span class="ansi-red-fg ansi-bold">Run the following command to install 'ipykernel' into the Python environment. 
+
+</span><span class="ansi-red-fg ansi-bold">Command: 'c:/Users/admin/AppData/Local/Programs/Python/Python313/python3.13t.exe -m pip install ipykernel -U --user --force-reinstall'</span></pre>
+</div>
+</div>
+</div>
+</section>
+<section id="using-pygal" class="level5">
+<h5 class="anchored" data-anchor-id="using-pygal">Using pygal:</h5>
+<div id="2e2e8a6c" class="cell">
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pygal</span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>line_chart <span class="op">=</span> pygal.Line()</span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>line_chart.title <span class="op">=</span> <span class="st">'Monthly Sales Data (2024)'</span></span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>line_chart.x_labels <span class="op">=</span> <span class="bu">map</span>(<span class="bu">str</span>, <span class="bu">range</span>(<span class="dv">1</span>, <span class="dv">13</span>))</span>
+<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a>line_chart.add(<span class="st">'Product A'</span>, [<span class="dv">150</span>, <span class="dv">200</span>, <span class="dv">220</span>, <span class="dv">240</span>, <span class="dv">300</span>, <span class="dv">500</span>, <span class="dv">450</span>, <span class="dv">470</span>, <span class="dv">490</span>, <span class="dv">520</span>, <span class="dv">580</span>, <span class="dv">600</span>])</span>
+<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a>line_chart.add(<span class="st">'Product B'</span>, [<span class="dv">100</span>, <span class="dv">120</span>, <span class="dv">140</span>, <span class="dv">160</span>, <span class="dv">200</span>, <span class="dv">300</span>, <span class="dv">350</span>, <span class="dv">370</span>, <span class="dv">400</span>, <span class="dv">430</span>, <span class="dv">450</span>, <span class="dv">480</span>])</span>
+<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a>line_chart.render_to_file(<span class="st">'line_chart.svg'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="using-matplotlib-1" class="level5">
+<h5 class="anchored" data-anchor-id="using-matplotlib-1">Using Matplotlib:</h5>
+<div id="3ce928dd" class="cell">
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>weeks <span class="op">=</span> [<span class="st">'Week 1'</span>, <span class="st">'Week 2'</span>, <span class="st">'Week 3'</span>, <span class="st">'Week 4'</span>]</span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>visits <span class="op">=</span> [<span class="dv">3000</span>, <span class="dv">4000</span>, <span class="dv">3500</span>, <span class="dv">5000</span>]</span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a>plt.figure(figsize<span class="op">=</span>(<span class="dv">8</span>, <span class="dv">5</span>))</span>
+<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a>plt.bar(weeks, visits, color<span class="op">=</span><span class="st">'skyblue'</span>)</span>
+<span id="cb10-8"><a href="#cb10-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-9"><a href="#cb10-9" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">'Weekly Visits'</span>, fontsize<span class="op">=</span><span class="dv">16</span>)</span>
+<span id="cb10-10"><a href="#cb10-10" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">'Week'</span>, fontsize<span class="op">=</span><span class="dv">12</span>)</span>
+<span id="cb10-11"><a href="#cb10-11" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">'Number of Visits'</span>, fontsize<span class="op">=</span><span class="dv">12</span>)</span>
+<span id="cb10-12"><a href="#cb10-12" aria-hidden="true" tabindex="-1"></a>plt.grid(axis<span class="op">=</span><span class="st">'y'</span>, linestyle<span class="op">=</span><span class="st">'--'</span>, alpha<span class="op">=</span><span class="fl">0.5</span>)</span>
+<span id="cb10-13"><a href="#cb10-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-14"><a href="#cb10-14" aria-hidden="true" tabindex="-1"></a>plt.tight_layout()</span>
+<span id="cb10-15"><a href="#cb10-15" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="using-pygal-1" class="level5">
+<h5 class="anchored" data-anchor-id="using-pygal-1">Using Pygal:</h5>
+<div id="49bf4b24" class="cell">
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>bar_chart <span class="op">=</span> pygal.Bar()</span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>bar_chart.title <span class="op">=</span> <span class="st">'Website Visits per Week'</span></span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>bar_chart.x_labels <span class="op">=</span> [<span class="st">'Week 1'</span>, <span class="st">'Week 2'</span>, <span class="st">'Week 3'</span>, <span class="st">'Week 4'</span>]</span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a>bar_chart.add(<span class="st">'Visits'</span>, [<span class="dv">3000</span>, <span class="dv">4000</span>, <span class="dv">3500</span>, <span class="dv">5000</span>])</span>
+<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a>bar_chart.render_to_file(<span class="st">'bar_chart.svg'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="using-matplotlib-2" class="level5">
+<h5 class="anchored" data-anchor-id="using-matplotlib-2">Using Matplotlib:</h5>
+<div id="9b19b332" class="cell">
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>labels <span class="op">=</span> [<span class="st">'Android'</span>, <span class="st">'iOS'</span>, <span class="st">'Others'</span>]</span>
+<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a>sizes <span class="op">=</span> [<span class="fl">68.3</span>, <span class="fl">30.3</span>, <span class="fl">1.4</span>]</span>
+<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a>colors <span class="op">=</span> [<span class="st">'#66b3ff'</span>, <span class="st">'#ff9999'</span>, <span class="st">'#99ff99'</span>]</span>
+<span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a>explode <span class="op">=</span> (<span class="fl">0.1</span>, <span class="dv">0</span>, <span class="dv">0</span>)</span>
+<span id="cb12-7"><a href="#cb12-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-8"><a href="#cb12-8" aria-hidden="true" tabindex="-1"></a>plt.figure(figsize<span class="op">=</span>(<span class="dv">8</span>, <span class="dv">8</span>))</span>
+<span id="cb12-9"><a href="#cb12-9" aria-hidden="true" tabindex="-1"></a>plt.pie(sizes, labels<span class="op">=</span>labels, colors<span class="op">=</span>colors, autopct<span class="op">=</span><span class="st">'</span><span class="sc">%1.1f%%</span><span class="st">'</span>, startangle<span class="op">=</span><span class="dv">140</span>, explode<span class="op">=</span>explode, shadow<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb12-10"><a href="#cb12-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-11"><a href="#cb12-11" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">'Market Share of Mobile OS'</span>, fontsize<span class="op">=</span><span class="dv">16</span>)</span>
+<span id="cb12-12"><a href="#cb12-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-13"><a href="#cb12-13" aria-hidden="true" tabindex="-1"></a>plt.tight_layout()</span>
+<span id="cb12-14"><a href="#cb12-14" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="using-pygal-2" class="level5">
+<h5 class="anchored" data-anchor-id="using-pygal-2">Using Pygal:</h5>
+<div id="e51ced7e" class="cell">
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pygal</span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>pie_chart <span class="op">=</span> pygal.Pie()</span>
+<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a>pie_chart.title <span class="op">=</span> <span class="st">'Market Share of Mobile OS'</span></span>
+<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a>pie_chart.add(<span class="st">'Android'</span>, <span class="fl">68.3</span>)</span>
+<span id="cb13-7"><a href="#cb13-7" aria-hidden="true" tabindex="-1"></a>pie_chart.add(<span class="st">'iOS'</span>, <span class="fl">30.3</span>)</span>
+<span id="cb13-8"><a href="#cb13-8" aria-hidden="true" tabindex="-1"></a>pie_chart.add(<span class="st">'Others'</span>, <span class="fl">1.4</span>)</span>
+<span id="cb13-9"><a href="#cb13-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-10"><a href="#cb13-10" aria-hidden="true" tabindex="-1"></a>pie_chart.render_to_file(<span class="st">'pie_chart.svg'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="using-matplotlib-3" class="level5">
+<h5 class="anchored" data-anchor-id="using-matplotlib-3">Using Matplotlib:</h5>
+<div id="06ea9df3" class="cell">
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a>labels <span class="op">=</span> [<span class="st">'Python'</span>, <span class="st">'Java'</span>, <span class="st">'C++'</span>, <span class="st">'JavaScript'</span>, <span class="st">'SQL'</span>]</span>
+<span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a>developer_a <span class="op">=</span> [<span class="dv">80</span>, <span class="dv">65</span>, <span class="dv">70</span>, <span class="dv">90</span>, <span class="dv">85</span>]</span>
+<span id="cb14-6"><a href="#cb14-6" aria-hidden="true" tabindex="-1"></a>developer_b <span class="op">=</span> [<span class="dv">60</span>, <span class="dv">75</span>, <span class="dv">85</span>, <span class="dv">80</span>, <span class="dv">70</span>]</span>
+<span id="cb14-7"><a href="#cb14-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-8"><a href="#cb14-8" aria-hidden="true" tabindex="-1"></a>angles <span class="op">=</span> np.linspace(<span class="dv">0</span>, <span class="dv">2</span> <span class="op">*</span> np.pi, <span class="bu">len</span>(labels), endpoint<span class="op">=</span><span class="va">False</span>).tolist()</span>
+<span id="cb14-9"><a href="#cb14-9" aria-hidden="true" tabindex="-1"></a>developer_a <span class="op">+=</span> developer_a[:<span class="dv">1</span>]</span>
+<span id="cb14-10"><a href="#cb14-10" aria-hidden="true" tabindex="-1"></a>developer_b <span class="op">+=</span> developer_b[:<span class="dv">1</span>]</span>
+<span id="cb14-11"><a href="#cb14-11" aria-hidden="true" tabindex="-1"></a>angles <span class="op">+=</span> angles[:<span class="dv">1</span>]</span>
+<span id="cb14-12"><a href="#cb14-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-13"><a href="#cb14-13" aria-hidden="true" tabindex="-1"></a>fig, ax <span class="op">=</span> plt.subplots(figsize<span class="op">=</span>(<span class="dv">8</span>, <span class="dv">8</span>), subplot_kw<span class="op">=</span><span class="bu">dict</span>(polar<span class="op">=</span><span class="va">True</span>))</span>
+<span id="cb14-14"><a href="#cb14-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-15"><a href="#cb14-15" aria-hidden="true" tabindex="-1"></a>ax.plot(angles, developer_a, label<span class="op">=</span><span class="st">'Developer A'</span>, color<span class="op">=</span><span class="st">'blue'</span>, linewidth<span class="op">=</span><span class="dv">2</span>)</span>
+<span id="cb14-16"><a href="#cb14-16" aria-hidden="true" tabindex="-1"></a>ax.fill(angles, developer_a, color<span class="op">=</span><span class="st">'blue'</span>, alpha<span class="op">=</span><span class="fl">0.25</span>)</span>
+<span id="cb14-17"><a href="#cb14-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-18"><a href="#cb14-18" aria-hidden="true" tabindex="-1"></a>ax.plot(angles, developer_b, label<span class="op">=</span><span class="st">'Developer B'</span>, color<span class="op">=</span><span class="st">'orange'</span>, linewidth<span class="op">=</span><span class="dv">2</span>)</span>
+<span id="cb14-19"><a href="#cb14-19" aria-hidden="true" tabindex="-1"></a>ax.fill(angles, developer_b, color<span class="op">=</span><span class="st">'orange'</span>, alpha<span class="op">=</span><span class="fl">0.25</span>)</span>
+<span id="cb14-20"><a href="#cb14-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-21"><a href="#cb14-21" aria-hidden="true" tabindex="-1"></a>ax.set_yticks([])</span>
+<span id="cb14-22"><a href="#cb14-22" aria-hidden="true" tabindex="-1"></a>ax.set_xticks(angles[:<span class="op">-</span><span class="dv">1</span>])</span>
+<span id="cb14-23"><a href="#cb14-23" aria-hidden="true" tabindex="-1"></a>ax.set_xticklabels(labels)</span>
+<span id="cb14-24"><a href="#cb14-24" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-25"><a href="#cb14-25" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">'Skill Set Comparison'</span>, fontsize<span class="op">=</span><span class="dv">16</span>)</span>
+<span id="cb14-26"><a href="#cb14-26" aria-hidden="true" tabindex="-1"></a>ax.legend(loc<span class="op">=</span><span class="st">'upper right'</span>, bbox_to_anchor<span class="op">=</span>(<span class="fl">1.1</span>, <span class="fl">1.1</span>))</span>
+<span id="cb14-27"><a href="#cb14-27" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-28"><a href="#cb14-28" aria-hidden="true" tabindex="-1"></a>plt.tight_layout()</span>
+<span id="cb14-29"><a href="#cb14-29" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="using-pygal-3" class="level5">
+<h5 class="anchored" data-anchor-id="using-pygal-3">Using Pygal:</h5>
+<div id="97103516" class="cell">
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pygal</span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a>radar_chart <span class="op">=</span> pygal.Radar()</span>
+<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a>radar_chart.title <span class="op">=</span> <span class="st">'Skill Set Comparison'</span></span>
+<span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-6"><a href="#cb15-6" aria-hidden="true" tabindex="-1"></a>radar_chart.x_labels <span class="op">=</span> [<span class="st">'Python'</span>, <span class="st">'Java'</span>, <span class="st">'C++'</span>, <span class="st">'JavaScript'</span>, <span class="st">'SQL'</span>]</span>
+<span id="cb15-7"><a href="#cb15-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-8"><a href="#cb15-8" aria-hidden="true" tabindex="-1"></a>radar_chart.add(<span class="st">'Developer A'</span>, [<span class="dv">80</span>, <span class="dv">65</span>, <span class="dv">70</span>, <span class="dv">90</span>, <span class="dv">85</span>])</span>
+<span id="cb15-9"><a href="#cb15-9" aria-hidden="true" tabindex="-1"></a>radar_chart.add(<span class="st">'Developer B'</span>, [<span class="dv">60</span>, <span class="dv">75</span>, <span class="dv">85</span>, <span class="dv">80</span>, <span class="dv">70</span>])</span>
+<span id="cb15-10"><a href="#cb15-10" aria-hidden="true" tabindex="-1"></a>radar_chart.render_to_file(<span class="st">'radar_chart.svg'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="using-matplotlib-4" class="level4">
+<h4 class="anchored" data-anchor-id="using-matplotlib-4">Using Matplotlib:</h4>
+<div id="caf09d74" class="cell">
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a>scores <span class="op">=</span> {</span>
+<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a>    <span class="st">'Math'</span>: [<span class="dv">45</span>, <span class="dv">60</span>, <span class="dv">75</span>, <span class="dv">85</span>, <span class="dv">95</span>],</span>
+<span id="cb16-5"><a href="#cb16-5" aria-hidden="true" tabindex="-1"></a>    <span class="st">'Science'</span>: [<span class="dv">50</span>, <span class="dv">65</span>, <span class="dv">70</span>, <span class="dv">80</span>, <span class="dv">90</span>],</span>
+<span id="cb16-6"><a href="#cb16-6" aria-hidden="true" tabindex="-1"></a>    <span class="st">'History'</span>: [<span class="dv">40</span>, <span class="dv">55</span>, <span class="dv">65</span>, <span class="dv">75</span>, <span class="dv">85</span>]</span>
+<span id="cb16-7"><a href="#cb16-7" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb16-8"><a href="#cb16-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-9"><a href="#cb16-9" aria-hidden="true" tabindex="-1"></a>data <span class="op">=</span> [scores[<span class="st">'Math'</span>], scores[<span class="st">'Science'</span>], scores[<span class="st">'History'</span>]]</span>
+<span id="cb16-10"><a href="#cb16-10" aria-hidden="true" tabindex="-1"></a>labels <span class="op">=</span> <span class="bu">list</span>(scores.keys())</span>
+<span id="cb16-11"><a href="#cb16-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-12"><a href="#cb16-12" aria-hidden="true" tabindex="-1"></a>plt.figure(figsize<span class="op">=</span>(<span class="dv">8</span>, <span class="dv">6</span>))</span>
+<span id="cb16-13"><a href="#cb16-13" aria-hidden="true" tabindex="-1"></a>plt.boxplot(data, labels<span class="op">=</span>labels, patch_artist<span class="op">=</span><span class="va">True</span>,</span>
+<span id="cb16-14"><a href="#cb16-14" aria-hidden="true" tabindex="-1"></a>            boxprops<span class="op">=</span><span class="bu">dict</span>(facecolor<span class="op">=</span><span class="st">'skyblue'</span>, color<span class="op">=</span><span class="st">'blue'</span>),</span>
+<span id="cb16-15"><a href="#cb16-15" aria-hidden="true" tabindex="-1"></a>            medianprops<span class="op">=</span><span class="bu">dict</span>(color<span class="op">=</span><span class="st">'red'</span>),</span>
+<span id="cb16-16"><a href="#cb16-16" aria-hidden="true" tabindex="-1"></a>            whiskerprops<span class="op">=</span><span class="bu">dict</span>(color<span class="op">=</span><span class="st">'blue'</span>),</span>
+<span id="cb16-17"><a href="#cb16-17" aria-hidden="true" tabindex="-1"></a>            capprops<span class="op">=</span><span class="bu">dict</span>(color<span class="op">=</span><span class="st">'blue'</span>))</span>
+<span id="cb16-18"><a href="#cb16-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-19"><a href="#cb16-19" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">'Exam Scores Distribution'</span>, fontsize<span class="op">=</span><span class="dv">16</span>)</span>
+<span id="cb16-20"><a href="#cb16-20" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">'Scores'</span>, fontsize<span class="op">=</span><span class="dv">12</span>)</span>
+<span id="cb16-21"><a href="#cb16-21" aria-hidden="true" tabindex="-1"></a>plt.grid(axis<span class="op">=</span><span class="st">'y'</span>, linestyle<span class="op">=</span><span class="st">'--'</span>, alpha<span class="op">=</span><span class="fl">0.5</span>)</span>
+<span id="cb16-22"><a href="#cb16-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-23"><a href="#cb16-23" aria-hidden="true" tabindex="-1"></a>plt.tight_layout()</span>
+<span id="cb16-24"><a href="#cb16-24" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<section id="using-pygal-4" class="level5">
+<h5 class="anchored" data-anchor-id="using-pygal-4">Using Pygal:</h5>
+<div id="97fcf2d2" class="cell">
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pygal</span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a>box_plot <span class="op">=</span> pygal.Box()</span>
+<span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a>box_plot.title <span class="op">=</span> <span class="st">'Exam Scores Distribution'</span></span>
+<span id="cb17-5"><a href="#cb17-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-6"><a href="#cb17-6" aria-hidden="true" tabindex="-1"></a>box_plot.add(<span class="st">'Math'</span>, [<span class="dv">45</span>, <span class="dv">60</span>, <span class="dv">75</span>, <span class="dv">85</span>, <span class="dv">95</span>])</span>
+<span id="cb17-7"><a href="#cb17-7" aria-hidden="true" tabindex="-1"></a>box_plot.add(<span class="st">'Science'</span>, [<span class="dv">50</span>, <span class="dv">65</span>, <span class="dv">70</span>, <span class="dv">80</span>, <span class="dv">90</span>])</span>
+<span id="cb17-8"><a href="#cb17-8" aria-hidden="true" tabindex="-1"></a>box_plot.add(<span class="st">'History'</span>, [<span class="dv">40</span>, <span class="dv">55</span>, <span class="dv">65</span>, <span class="dv">75</span>, <span class="dv">85</span>])</span>
+<span id="cb17-9"><a href="#cb17-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-10"><a href="#cb17-10" aria-hidden="true" tabindex="-1"></a>box_plot.render_to_file(<span class="st">'box_plot.svg'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 
 
+</section>
+</section>
 </section>
 
 </main> <!-- /main -->
