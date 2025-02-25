@@ -1,5 +1,5 @@
 ---
-title: Quarto Template
+title: Pygal `:` A visualisation Library
 ---
 
 Quarto template Text!
