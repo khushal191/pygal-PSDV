@@ -15,16 +15,6 @@ Data visualization is an essential part of understanding and presenting data eff
 ✔️ **Customizable & Lightweight** – Tailor your visualizations to match your needs.  
 ✔️ **Perfect for Web & Reports** – Embed charts effortlessly in websites and documents.  
 
-### Intro Video
-<center>
-
-
-<video controls width="80%">
-  <source src="media\WhatsApp Video 2025-02-25 at 21.23.03_d2ad1580.mp4" type="video/mp4">
-  Your browser does not support the video tag.
-</video>
-</center>
-
 Learn More on our *Blog*
 
 Visit our *[You Tube](https://youtu.be/FGJ5Xf1AY7E)*
