@@ -2,5 +2,28 @@
 title: Pygal `:` A visualisation Library
 ---
 
+# Welcome to Pygal Data Visualization 🚀
 
+## Your Go-To Guide for Elegant & Interactive Python Charts
+
+Data visualization is an essential part of understanding and presenting data effectively. **Pygal** makes it easy to create beautiful, interactive, and customizable **SVG-based charts** that work seamlessly on the web.
+
+## Why Pygal?
+
+✔️ **Simple & Beginner-Friendly** – Generate charts with just a few lines of code.  
+✔️ **Interactive SVG Charts** – Zoom, hover, and explore data dynamically.  
+✔️ **Customizable & Lightweight** – Tailor your visualizations to match your needs.  
+✔️ **Perfect for Web & Reports** – Embed charts effortlessly in websites and documents.  
+
+### *Intro Video*
+<center>
+
+
+<video controls width="80%">
+  <source src="media/WhatsApp Video 2025-02-23 at 23.24.45.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+</center>
+
+Learn More on our *Blog*
 
